@@ -1,0 +1,302 @@
+<div id="intro" class="fixed inset-0 bg-white flex items-center justify-center overflow-hidden z-50 transition-opacity duration-1000">
+    <img id="intro-img" src="laura_manu1.jpeg" alt="Mundo da Laura Manuela" class="w-full h-full object-cover">
+</div>
+
+<script>
+    // Alterna as imagens e depois exibe o site
+    window.addEventListener('load', () => {
+        const intro = document.getElementById('intro');
+        const img = document.getElementById('intro-img');
+
+        setTimeout(() => {
+            img.src = "laura_manu2.jpeg"; // mostra a segunda imagem
+        }, 2500); // muda após 2,5 segundos
+
+        setTimeout(() => {
+            intro.style.opacity = '0'; // faz o fade-out
+            setTimeout(() => intro.style.display = 'none', 1000); // remove a introdução
+        }, 5000); // desaparece após 5 segundos
+    });
+</script>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo da Laura Manuela</title>
+    <!-- Carregando Tailwind CSS para estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Definindo a fonte Inter (padrão Google) e cores de fundo suaves */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Pacifico&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f3f8; /* Lilás/Rosa muito claro */
+            line-height: 1.6;
+        }
+        /* Estilização divertida para títulos */
+        .title-fun {
+            font-family: 'Pacifico', cursive;
+            text-shadow: 2px 2px #fff;
+        }
+
+        /* Cores pastel personalizadas */
+        .bg-pink-pastel { background-color: #FEECEB; } /* Rosa Claro */
+        .bg-lilac-pastel { background-color: #F4E7FE; } /* Lilás Claro */
+        .bg-blue-pastel { background-color: #E7F6FE; } /* Azul Bebê Claro */
+        .text-dark-pink { color: #D45079; }
+        .text-dark-purple { color: #8A48A5; }
+        .text-dark-blue { color: #486CA5; }
+    </style>
+</head>
+<body class="min-h-screen text-gray-700">
+
+    <!-- Container Principal do Portfólio -->
+    <div class="max-w-xl mx-auto shadow-2xl rounded-3xl overflow-hidden bg-white">
+
+        <!-- ----------------------------------------------------- -->
+        <!-- PÁGINA 1 – CAPA / IDENTIDADE (Rosa/Lilás/Azul Bebê) -->
+        <!-- ----------------------------------------------------- -->
+        <section id="capa" class="bg-gradient-to-br from-pink-pastel via-lilac-pastel to-blue-pastel p-8 md:p-12 text-center border-b-4 border-white shadow-inner">
+            <!-- Título Principal -->
+            <h1 class="text-5xl md:text-6xl font-extrabold title-fun text-dark-pink mt-10 mb-4 animate-bounce">
+                🌈 Mundo da Laura Manuela
+            </h1>
+            <!-- Subtítulo (Frase Âncora) -->
+            <p class="text-xl md:text-2xl font-medium text-dark-purple mb-6">
+                Um universo de imaginação, alegria e descobertas ✨
+            </p>
+            <!-- Descrição Opcional -->
+            <p class="text-sm md:text-base text-gray-600 mb-10">
+                Aqui começa a jornada de uma menina criativa, curiosa e cheia de sonhos.
+                Um espaço feito para inspirar, brincar e encantar!
+            </p>
+
+            <!-- A seção da foto foi removida para manter a capa mais limpa e focada no texto. -->
+            
+        </section>
+
+        <!-- ----------------------------------------------------- -->
+        <!-- PÁGINA 2 – BOAS-VINDAS / CONEXÃO (Fundo Branco + Formas Suaves) -->
+        <!-- ----------------------------------------------------- -->
+        <section id="boas-vindas" class="bg-white p-8 md:p-12 text-center relative overflow-hidden">
+            <!-- Formas Suaves em Pastel (SVG ou pseudo-elementos, aqui usamos classes) -->
+            <div class="absolute top-0 left-0 w-32 h-32 bg-lilac-pastel rounded-br-full opacity-30"></div>
+            <div class="absolute bottom-0 right-0 w-40 h-40 bg-pink-pastel rounded-tl-full opacity-30"></div>
+
+            <h2 class="text-3xl md:text-4xl font-bold text-dark-blue mb-4 relative z-10">
+                ✨ Bem-vindo ao Mundo da Laura Manuela!
+            </h2>
+            <div class="p-6 bg-yellow-50 rounded-xl shadow-lg relative z-10">
+                <p class="text-base md:text-lg mb-4 italic font-semibold">
+                    "Laura tem 5 anos e um brilho que encanta todo mundo ao redor.
+                    Ela adora brincar, aprender palavras novas e explorar o mundo com curiosidade."
+                </p>
+                <p class="text-sm text-gray-600">
+                    Neste cantinho, você vai conhecer uma menina divertida, comunicativa e cheia de personalidade — pronta para inspirar outras crianças com o seu jeitinho doce e criativo 💫
+                </p>
+            </div>
+
+            <!-- Ícones Delicados -->
+            <div class="flex justify-center space-x-6 mt-6">
+                <!-- Coração -->
+                <svg class="w-8 h-8 text-pink-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                <!-- Lápis -->
+                <svg class="w-8 h-8 text-blue-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+                <!-- Estrelinha -->
+                <svg class="w-8 h-8 text-purple-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
+        </section>
+
+        <!-- ----------------------------------------------------- -->
+        <!-- PÁGINA 3 – SOBRE A LAURA / HISTÓRIA E ESSÊNCIA -->
+        <!-- ----------------------------------------------------- -->
+        <section id="sobre-laura" class="bg-lilac-pastel p-8 md:p-12 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark-purple mb-6">
+                🌟 Quem é Laura Manuela?
+            </h2>
+
+            <!-- Layout "Cartão de Personalidade" com ícones -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                <!-- 1. Moda e Criatividade -->
+                <div class="bg-white p-5 rounded-2xl shadow-xl transform hover:scale-105 transition duration-300 border-b-4 border-pink-300">
+                    <span class="text-2xl block mb-2">👚</span>
+                    <h3 class="font-bold text-lg text-dark-pink">Moda e Criatividade</h3>
+                    <p class="text-sm text-gray-600">Adora escolher looks coloridos e estilosos.</p>
+                </div>
+
+                <!-- 2. Brincadeiras e Descobertas -->
+                <div class="bg-white p-5 rounded-2xl shadow-xl transform hover:scale-105 transition duration-300 border-b-4 border-yellow-300">
+                    <span class="text-2xl block mb-2">🦖</span>
+                    <h3 class="font-bold text-lg text-dark-purple">Brincadeiras e Descobertas</h3>
+                    <p class="text-sm text-gray-600">Apaixonada por dinossauros, Pikachu, Barbie e Hot Wheels.</p>
+                </div>
+
+                <!-- 3. Conteúdo com Propósito -->
+                <div class="bg-white p-5 rounded-2xl shadow-xl transform hover:scale-105 transition duration-300 border-b-4 border-blue-300">
+                    <span class="text-2xl block mb-2">🎬</span>
+                    <h3 class="font-bold text-lg text-dark-blue">Conteúdo com Propósito</h3>
+                    <p class="text-sm text-gray-600">Gosta de aprender, falar com a câmera e mostrar seu jeitinho alegre.</p>
+                </div>
+
+                <!-- 4. Sonho -->
+                <div class="bg-white p-5 rounded-2xl shadow-xl transform hover:scale-105 transition duration-300 border-b-4 border-purple-300">
+                    <span class="text-2xl block mb-2">👑</span>
+                    <h3 class="font-bold text-lg text-dark-purple">Sonho</h3>
+                    <p class="text-sm text-gray-600">Ser modelo e inspirar outras crianças com alegria e autenticidade.</p>
+                </div>
+            </div>
+            
+            <p class="text-sm mt-6 italic text-gray-500">
+                Laura é curiosa, espontânea e ama transformar cada momento em diversão.
+            </p>
+        </section>
+
+        <!-- ----------------------------------------------------- -->
+        <!-- PÁGINA 4 – PARCERIAS / PROFISSIONALISMO E VALOR (Método Hanah) -->
+        <!-- ----------------------------------------------------- -->
+        <section id="parcerias" class="bg-blue-pastel p-8 md:p-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark-blue text-center mb-8">
+                🤝 Parcerias com propósito
+            </h2>
+
+            <div class="space-y-6">
+
+                <!-- 1. Valor -->
+                <div class="flex items-start space-x-4 bg-white p-4 rounded-xl shadow-md">
+                    <span class="flex-shrink-0 text-3xl text-pink-500">✨</span>
+                    <div>
+                        <h3 class="font-bold text-dark-pink">VALOR</h3>
+                        <p class="text-sm">O Mundo da Laura Manuela é um espaço de imaginação, afeto e autenticidade — perfeito para marcas que desejam se conectar com famílias e o público infantil de forma leve e verdadeira.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Forma -->
+                <div class="flex items-start space-x-4 bg-white p-4 rounded-xl shadow-md">
+                    <span class="flex-shrink-0 text-3xl text-purple-500">🎨</span>
+                    <div>
+                        <h3 class="font-bold text-dark-purple">FORMA</h3>
+                        <p class="text-sm">As divulgações são feitas por meio de fotos, vídeos curtos e histórias interativas no Instagram, sempre com um toque lúdico e criativo.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Prova -->
+                <div class="flex items-start space-x-4 bg-white p-4 rounded-xl shadow-md">
+                    <span class="flex-shrink-0 text-3xl text-yellow-500">🌸</span>
+                    <div>
+                        <h3 class="font-bold text-yellow-700">PROVA</h3>
+                        <p class="text-sm">Todo conteúdo é produzido com cuidado estético e espontaneidade, valorizando o olhar e a essência da Laura.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Ação (CTA) -->
+                <div class="bg-lilac-pastel p-6 rounded-xl text-center shadow-xl">
+                    <h3 class="font-bold text-xl text-dark-purple mb-3">📩 AÇÃO (Entre em Contato!)</h3>
+                    <p class="mb-4 text-sm font-medium">
+                        Quer apresentar sua marca para o Mundo da Laura Manuela?
+                    </p>
+                    <!-- Links/Botões de Contato -->
+                    <div class="space-y-2">
+                        <a href="https://instagram.com/mundodalauramanuela" target="_blank" class="block w-full py-3 px-4 bg-pink-500 text-white font-bold rounded-full shadow-lg hover:bg-pink-600 transition duration-300">
+                            Instagram @mundodalauramanuela
+                        </a>
+                        <!-- NOVO: Link direto para o WhatsApp -->
+                        <a href="https://wa.me/5548992083814" target="_blank" class="block w-full py-3 px-4 bg-green-500 text-white font-bold rounded-full shadow-lg hover:bg-green-600 transition duration-300">
+                            WhatsApp Aline Gluch 📱
+                        </a>
+                        <!-- O e-mail já estava correto, mantido -->
+                        <a href="mailto:aline21314@gmail.com" class="block w-full py-3 px-4 bg-purple-500 text-white font-bold rounded-full shadow-lg hover:bg-purple-600 transition duration-300">
+                            E-mail aline21314@gmail.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ----------------------------------------------------- -->
+        <!-- MINI-JOGUINHO INTERATIVO (EXTRA) -->
+        <!-- ----------------------------------------------------- -->
+        <section id="mini-jogo" class="bg-white p-8 md:p-12 text-center rounded-b-3xl">
+            <h2 class="text-2xl font-bold text-dark-pink mb-4">
+                🎮 Mini-Joguinho: Encontre os Favoritos!
+            </h2>
+            <p class="text-gray-600 mb-6">
+                Ajude a Laura a encontrar seus brinquedos favoritos! Clique em um para descobrir mais:
+            </p>
+
+            <!-- Botões dos Brinquedos -->
+            <div class="grid grid-cols-2 gap-4">
+                <button onclick="encontrarBrinquedo('Pikachu')" class="brinquedo-btn bg-yellow-400 text-yellow-900 font-extrabold py-3 rounded-xl shadow-lg hover:bg-yellow-500 transition duration-150">
+                    Pikachu ⚡
+                </button>
+                <button onclick="encontrarBrinquedo('Barbie')" class="brinquedo-btn bg-pink-300 text-pink-900 font-extrabold py-3 rounded-xl shadow-lg hover:bg-pink-400 transition duration-150">
+                    Barbie 💖
+                </button>
+                <button onclick="encontrarBrinquedo('Dinossauro')" class="brinquedo-btn bg-green-300 text-green-900 font-extrabold py-3 rounded-xl shadow-lg hover:bg-green-400 transition duration-150">
+                    Dinossauro 🦖
+                </button>
+                <button onclick="encontrarBrinquedo('Hot Wheels')" class="brinquedo-btn bg-red-400 text-red-900 font-extrabold py-3 rounded-xl shadow-lg hover:bg-red-500 transition duration-150">
+                    Hot Wheels 🚗
+                </button>
+            </div>
+
+            <!-- Modal/Caixa de Mensagem Fofa (Não usar alert!) -->
+            <div id="feedback-modal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-75 flex items-center justify-center p-4 z-50 transition-opacity duration-300">
+                <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-sm w-full border-t-8 border-pink-500">
+                    <h3 id="modal-title" class="text-2xl font-bold text-dark-purple mb-4"></h3>
+                    <p id="modal-message" class="text-gray-700 mb-6"></p>
+                    <button onclick="fecharModal()" class="w-full py-2 bg-pink-500 text-white font-bold rounded-full hover:bg-pink-600 transition duration-300">
+                        Que fofo! 😊
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Script JavaScript para a Interação do Mini-Joguinho -->
+    <script>
+        // Função para mostrar o modal de feedback
+        function mostrarModal(titulo, mensagem) {
+            document.getElementById('modal-title').innerText = titulo;
+            document.getElementById('modal-message').innerText = mensagem;
+            document.getElementById('feedback-modal').classList.remove('hidden');
+            // Remove a classe de opacidade para iniciar a transição
+            setTimeout(() => document.getElementById('feedback-modal').style.opacity = '1', 10);
+        }
+
+        // Função para fechar o modal de feedback
+        function fecharModal() {
+            document.getElementById('feedback-modal').classList.add('hidden');
+            document.getElementById('feedback-modal').style.opacity = '0';
+        }
+
+        // Lógica principal do mini-joguinho
+        function encontrarBrinquedo(brinquedo) {
+            let titulo = "🎉 Descoberta!";
+            let mensagem = "";
+
+            switch(brinquedo) {
+                case 'Pikachu':
+                    mensagem = "Você encontrou o Pikachu! ⚡ Ele é um dos melhores amigos da Laura e adora aventuras!";
+                    break;
+                case 'Barbie':
+                    mensagem = "Achou a Barbie! 💖 Ela inspira a Laura a ser o que quiser e a criar looks incríveis.";
+                    break;
+                case 'Dinossauro':
+                    mensagem = "Uau, o Dinossauro! 🦖 A Laura adora inventar histórias com ele. Que rugido divertido!";
+                    break;
+                case 'Hot Wheels':
+                    mensagem = "Vrumm! Encontrou o Hot Wheels! 🚗 Pronto para corridas de alta velocidade com a Laura!";
+                    break;
+                default:
+                    mensagem = "Ops, esse brinquedo ainda está se escondendo!";
+            }
+
+            mostrarModal(titulo, mensagem);
+        }
+    </script>
+</body>
+</html>
